@@ -55,7 +55,7 @@ resource "openstack_compute_instance_v2" "machine" {
   count      = var.machines
   name       = "terraform-test-test-machine-${count.index}"
   image_name = var.image_name
-  key_pair   = "fbergmann-caasp"
+  key_pair   = var.key_pair
 
   depends_on = [
     openstack_networking_network_v2.network,

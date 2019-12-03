@@ -37,3 +37,8 @@ variable "username" {
   type    = string
   default = "sles"
 }
+
+variable "key_pair" {
+  type    = string
+  default = ""
+}
